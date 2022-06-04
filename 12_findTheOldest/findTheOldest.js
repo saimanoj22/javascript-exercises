@@ -4,12 +4,11 @@ const findTheOldest = function(list) {
             item['yearOfDeath'] = new Date().getFullYear();
         }
     });
-    const array = list.sort(function(lastOne, nextOne){
+    return list.reduce((lastOne, nextOne) => {
         const last = lastOne.yearOfDeath - lastOne.yearOfBirth;
         const next = nextOne.yearOfDeath - nextOne.yearOfBirth;
-        return last > next ? -1 : 1;
+        return last > next ? lastOne : nextOne;
     });
-    return array[0];
 };
 
 // Do not edit below this line
