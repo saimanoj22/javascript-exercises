@@ -7,20 +7,11 @@ const subtract = function(a, b) {
 };
 
 const sum = function(array) {
-	let total = 0;
-  for(let i = 0; i < array.length; i++){
-    total += parseInt(array[i]);
-  }
-  return total;
+  return array.reduce((total, element) => { return total + element}, 0);
 };
 
 const multiply = function(array) {
-  if(array.length === 0)return 0;
-	let product = 1;
-  for(let i = 0; i < array.length; i++){
-    product *= parseInt(array[i]);
-  }
-  return product;
+  return array.length ? array.reduce((total, element) => { return total * element}, 1) : 0;
 };
 
 const power = function(a, b) {
