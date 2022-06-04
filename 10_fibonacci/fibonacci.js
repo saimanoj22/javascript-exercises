@@ -1,7 +1,7 @@
 const fibonacci = function(number) {
     if(number < 0)return "OOPS";
-    number = parseInt(number); 
-    if(number === 1 || number === 2)return 1;
+    if(number == 0)return 0;
+    if(number == 1 || number == 2)return 1;
     let a = 1, b = 1,c = 0;
     for(let i = 2; i < number; i++){
         c = a + b;
